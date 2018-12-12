@@ -1,0 +1,30 @@
+﻿@model MVCMyCurrency.Models.MVCAlert
+@{
+
+    ViewData["Title"] = "Add Or Edit";
+}
+
+<h2>Add Or Edit</h2>
+<div class="form-body">
+    @using (Html.BeginForm())
+    {
+        @Html.HiddenFor(model => model.AlertId)
+        @Html.HiddenFor(model => model.Email)
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.CurrencyName)
+            @Html.EditorFor(model => model.CurrencyName)
+            @Html.ValidationMessageFor(model => model.CurrencyName)
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(model => model.BestValue)
+            @Html.EditorFor(model => model.BestValue)
+            @Html.ValidationMessageFor(model => model.BestValue)
+        </div>
+
+        <div class="form-group">
+            <input type="submit" value="Submit" class="btn-default" />
+            <input type="reset" value="Reset" class="btn-default" />
+        </div>
+    }
+</div>
