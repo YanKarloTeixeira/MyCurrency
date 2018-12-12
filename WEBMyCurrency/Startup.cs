@@ -9,11 +9,11 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
-using MVCMyCurrency.Data;
+using WEBMyCurrency.Data;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 
-namespace MVCMyCurrency
+namespace WEBMyCurrency
 {
     public class Startup
     {
@@ -63,13 +63,11 @@ namespace MVCMyCurrency
 
             app.UseAuthentication();
 
-            
             app.UseMvc(routes =>
             {
                 routes.MapRoute(
                     name: "default",
-                //template: "{controller=Home}/{action=Index}/{id?}");
-                template: "{controller=MVCAlerts}/{action=Index}/{id?}");
+                    template: "{controller=Home}/{action=Index}/{id?}");
             });
         }
     }

@@ -24,8 +24,8 @@ namespace ConsoleMyCurrency.Helper
                     "This is an authomatic message, please do not reply it. \n\n" +
                     "You are receiving this message according you set up for best value for buying the currency bellow : \n" +
                     "Currency : " + alert.CurrencyName +
-                    "\nBest value defined :" + Math.Round(alert.BestValue, 5) +
-                    "\nPosition :" + Math.Round(value, 5) +
+                    "\nBest value defined : CAD$" + Math.Round(alert.BestValue, 5) +
+                    "\nPosition : CAD$" + Math.Round(value, 5) +
                     "\nVariation of CAD$" + Math.Round(alert.BestValue - value, 5);
                 Receiver = alert.Email;
 

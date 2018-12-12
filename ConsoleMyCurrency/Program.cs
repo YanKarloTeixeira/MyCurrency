@@ -18,7 +18,8 @@ namespace ConsoleMyCurrency
         {
             System.Timers.Timer aTimer = new System.Timers.Timer();
             aTimer.Elapsed += new ElapsedEventHandler(OnTimedEvent);
-            aTimer.Interval = 3600000;
+            aTimer.Interval = 3600000; // 1 hour
+            aTimer.Interval = 30000; // 1 hour
             aTimer.Enabled = true;
             Console.WriteLine("=======================================");
             Console.WriteLine("|");
